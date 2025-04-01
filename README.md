@@ -54,18 +54,31 @@ Clone the repository:
 git clone https://github.com/Diana-codes/linear_regression_model.git
 
 cd linear_regression_model
+
 Run Jupyter Notebook
+
 (if you're using a Jupyter notebook for the model):
+
 cd summative/linear_regression
+
 jupyter notebook model.ipynb
+
 Start the API (to expose the model as an API):
+
 cd summative/API
+
 pip install -r requirements.txt
+
 uvicorn app:app --reload
+
 Run the Crop Yield Predictor
+
 cd summative/crop_yield_predictor
+
 python predict.py
+
 📂 Repository Structure
+
 
 linear_regression_model/
 ├── summative/
@@ -75,10 +88,16 @@ linear_regression_model/
 └── README.md
 
 License
+
 This version:
 
+
 Uses simple Markdown formatting
+
 Includes all required sections
+
 Provides clear installation steps
+
 Shows API documentation
+
 Links to demo video
