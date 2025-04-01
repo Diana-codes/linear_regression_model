@@ -41,77 +41,44 @@ The system predicts crop yield in tons per hectare using the following parameter
   "Weather_Condition": 2,
   "Region": 0
 }
-Example Response:
-
-json
-Copy
-Edit
+**Example Response:**
+```json
 {
   "prediction": 8.26,
   "units": "tons_per_hectare"
 }
+```
 🛠️ Installation Guide
 
 Clone the repository:
-
-bash
-Copy
-Edit
 git clone https://github.com/Diana-codes/linear_regression_model.git
+
 cd linear_regression_model
 Run Jupyter Notebook
 (if you're using a Jupyter notebook for the model):
-
-bash
-Copy
-Edit
 cd summative/linear_regression
 jupyter notebook model.ipynb
 Start the API (to expose the model as an API):
-
-bash
-Copy
-Edit
 cd summative/API
 pip install -r requirements.txt
 uvicorn app:app --reload
 Run the Crop Yield Predictor
-
-bash
-Copy
-Edit
 cd summative/crop_yield_predictor
 python predict.py
 📂 Repository Structure
 
-bash
-Copy
-Edit
 linear_regression_model/
 ├── summative/
 │   ├── linear_regression/        # Jupyter notebook & dataset
 │   ├── API/                     # FastAPI implementation for the model
 │   ├── crop_yield_predictor/    # Custom logic for crop yield prediction
 └── README.md
+
 License
 This version:
 
 Uses simple Markdown formatting
-
 Includes all required sections
-
 Provides clear installation steps
-
 Shows API documentation
-
 Links to demo video
-
-Maintains clean file structure
-
-vbnet
-Copy
-Edit
-
-3. **Save the file** (`README.md`).
-
-By pasting the above markdown into your `README.md`, it will maintain the clean structure with headings, bullet points, code blocks, and other formatting intact. Let me know if you need any further adjustments!
