@@ -1,113 +1,83 @@
-📱 Mobile App Demo (2 minutes)
-Script:
-"Here’s our Crop Yield Predictor mobile app in action. Let’s test a prediction:"
+# 🌾 Crop Yield Prediction System
 
-Open the app (show the UI briefly).
+📌 **Overview**  
+This machine learning system predicts crop yield based on various environmental and agricultural factors. By analyzing relationships between factors like rainfall, temperature, soil type, and more, it provides accurate predictions to help farmers optimize their farming techniques and improve crop productivity.
 
-Fill in sample inputs:
+📌 **Project Overview**  
+The system predicts crop yield in tons per hectare using the following parameters:
+- Rainfall (mm)
+- Temperature (°C)
+- Soil Type
+- Fertilizer Used
+- Irrigation Used
+- Weather Condition
+- Region
 
-"We’ll enter rainfall: 120mm, temperature: 25°C, loam soil, sunny weather… and enable irrigation."
+🛠️ **Technical Components**  
+- **ML Model**: Linear Regression Model (or another model you are using)
+- **API**: FastAPI for providing predictions via an endpoint
+- **Crop Yield Predictor**: Custom logic for crop yield prediction
+- **Linear Regression**: Implementation of linear regression model with dataset
+- **Mobile App**: (Optional, if you're building a mobile interface)
 
-Tap "Predict":
+🎥 **Video Demo**  
+[Demo Video Link]  
+- App prediction demo
+- API testing via Swagger UI
+- Model performance comparison
 
-Show the loading state.
+🔗 **Live API Documentation**  
+- **Swagger UI**: [API Docs](https://your-api-url.com/docs)
+- **Endpoint**: `POST https://your-api-url.com/predict`
 
-Display results: "The model predicts 1,850 kg/ha yield for these conditions."
-
-Key Focus:
-
-Smooth UI flow
-
-Clear input/output visibility
-
-🛠️ Swagger UI API Test (1 minute)
-Script:
-"Now, let’s validate the API behind the app using Swagger UI:"
-
-Open Swagger in a browser (show the /predict endpoint).
-
-Send a sample request:
-
-json
-Copy
+**Example Request:**
+```json
 {
-  "rainfall": 120,
-  "temperature": 25,
-  "soilType": 2,
-  "irrigationUsed": true
+  "Rainfall_mm": 1800,
+  "Temperature_Celsius": 45,
+  "Soil_Type": 1,
+  "Fertilizer_Used": 1,
+  "Irrigation_Used": 1,
+  "Weather_Condition": 2,
+  "Region": 0
 }
-Show the response:
+Example Response:
 
-Highlight the prediction value and response time.
+{
+  "prediction": 8.26,
+  "units": "tons_per_hectare"
+}
 
-Key Focus:
+🛠️ Installation Guide
+Clone the repository: git clone https://github.com/Diana-codes/linear_regression_model.git
+cd linear_regression_model
+Run Jupyter Notebook (if you're using a Jupyter notebook for the model):
+cd summative/linear_regression
+jupyter notebook model.ipynb
+Start the API (to expose the model as an API):
+cd summative/API
+pip install -r requirements.txt
+uvicorn app:app --reload
+Run the Crop Yield Predictor
+cd summative/crop_yield_predictor
+python predict.py
 
-Prove the API works independently
+📂 Repository Structure
 
-Show request/response structure
+linear_regression_model/
+├── summative/
+│   ├── linear_regression/        # Jupyter notebook & dataset
+│   ├── API/                     # FastAPI implementation for the model
+│   ├── crop_yield_predictor/    # Custom logic for crop yield prediction
+└── README.md
 
-📊 Model Deployment & Performance (2 minutes)
-Script:
-"Our model deployment pipeline used three algorithms trained on [X] samples of agricultural data:"
+License
 
-Performance Comparison:
+This version:
 
-"Linear Regression achieved an MSE of 150, Random Forest: 120, Decision Tree: 135."
-
-"Random Forest performed best due to handling non-linear relationships in our dataset."
-
-Dataset Impact:
-
-"Features like rainfall and soil type had high correlation with yield (show a correlation plot if possible)."
-
-"We normalized the data to address scale differences."
-
-Model Selection Justification:
-
-"We chose Random Forest for its balance of accuracy and interpretability, despite slightly higher training time."
-
-Key Focus:
-
-Metrics-driven insights
-
-Link dataset traits to model choice
-
-🎬 Production Tips
-Camera Setup:
-
-Face the camera directly with good lighting.
-
-Show the app on your phone (not emulator) for authenticity.
-
-Editing:
-
-Use zoom-ins for key moments (e.g., prediction result).
-
-Add subtitles for metric values (e.g., "MSE: 120").
-
-Practice:
-
-Time each section to stay under 3 minutes per demo.
-
-Example Transition Phrases
-"Now, let’s peek under the hood at the models..."
-
-"As you saw in the app, the API delivers this result in real-time..."import joblib
-
-# Select the best model
-best_model = None
-best_mse = min(dt_mse, rf_mse)  # Compare MSE for Decision Tree and Random Forest
-
-if best_mse == dt_mse:
-    print("Saving Decision Tree model as best...")
-    best_model = dt_model  # Assign the trained Decision Tree model
-    joblib.dump(best_model, 'best_decision_tree.pkl')
-
-else:
-    print("Saving Random Forest model as best...")
-    best_model = rf_model  # Assign the trained Random Forest model
-    joblib.dump(best_model, 'best_random_forest.pkl')
-
-print("Best model saved successfully!")
-
-
+Uses simple Markdown formatting
+Includes all required sections
+Provides clear installation steps
+Shows API documentation
+Links to demo video
+Maintains clean file structure
