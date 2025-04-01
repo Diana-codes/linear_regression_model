@@ -30,8 +30,8 @@ The system predicts crop yield in tons per hectare using the following parameter
 - **Swagger UI**: [API Docs](https://your-api-url.com/docs)
 - **Endpoint**: `POST https://your-api-url.com/predict`
 
-**Example Request:**
-```json
+Example Request:
+json
 {
   "Rainfall_mm": 1800,
   "Temperature_Celsius": 45,
@@ -41,6 +41,7 @@ The system predicts crop yield in tons per hectare using the following parameter
   "Weather_Condition": 2,
   "Region": 0
 }
+
 Example Response:
 
 {
@@ -49,9 +50,12 @@ Example Response:
 }
 
 🛠️ Installation Guide
+
 Clone the repository: git clone https://github.com/Diana-codes/linear_regression_model.git
+
 cd linear_regression_model
-Run Jupyter Notebook (if you're using a Jupyter notebook for the model):
+Run Jupyter Notebook
+(if you're using a Jupyter notebook for the model):
 cd summative/linear_regression
 jupyter notebook model.ipynb
 Start the API (to expose the model as an API):
@@ -74,7 +78,6 @@ linear_regression_model/
 License
 
 This version:
-
 Uses simple Markdown formatting
 Includes all required sections
 Provides clear installation steps
