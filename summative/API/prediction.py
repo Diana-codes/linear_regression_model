@@ -74,8 +74,7 @@ async def predict(input_data: PredictionInput):
             input_data.Weather_Condition,
             input_data.Region
         ]])
-        
-        # Validate input shape matches model expectations
+        # Validate input shape matches model expectation
         if features.shape[1] != 7:
             raise HTTPException(
                 status_code=422,
