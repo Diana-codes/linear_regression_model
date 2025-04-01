@@ -82,7 +82,7 @@ python predict.py
 
 linear_regression_model/
 ├── summative/
-│   ├── linear_regression/        # Jupyter notebook & dataset
+│   ├── linear_regression/  # Jupyter notebook & dataset
 │   ├── API/                     # FastAPI implementation for the model
 │   ├── crop_yield_predictor/    # Custom logic for crop yield prediction
 └── README.md
