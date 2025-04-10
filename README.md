@@ -1,59 +1,60 @@
-🌾 Crop Yield Prediction System
-📱 FastAPI + (Optional) Mobile App + Machine Learning Demo
+# 🌾 Crop Yield Prediction System
 
-📌 Overview
-This machine learning system predicts crop yield using key environmental and agricultural parameters. By analyzing factors such as rainfall, soil type, and weather conditions, it provides accurate yield forecasts to help farmers optimize productivity.
+---
 
-📌 Project Overview
-The system predicts crop yield (in tons per hectare) based on the following parameters:
+## 📌 Overview
 
-Rainfall (mm)
+This machine learning system predicts crop yield based on various environmental and agricultural factors.  
+By analyzing relationships between factors like rainfall, temperature, soil type, and more,  
+it provides accurate predictions to help farmers optimize their farming techniques and improve crop productivity.
 
-Temperature (°C)
+---
 
-Soil Type
+## 📌 Project Overview
 
-Fertilizer Used
+The system predicts crop yield in tons per hectare using the following parameters:
 
-Irrigation Used
+- 🌧️ Rainfall (mm)  
+- 🌡️ Temperature (°C)  
+- 🧪 Soil Type  
+- 🌿 Fertilizer Used  
+- 🚿 Irrigation Used  
+- ☁️ Weather Condition  
+- 📍 Region  
 
-Weather Condition
+---
 
-Region
+## 🛠️ Technical Components
 
-🛠️ Technical Components
-ML Model: Linear Regression (or alternative regression model)
+- 🤖 **ML Model**: Linear Regression (or your chosen model)  
+- 🔌 **API**: FastAPI for serving predictions  
+- 📈 **Crop Yield Predictor**: Custom logic for generating yield predictions  
+- 📊 **Notebook**: Jupyter Notebook for model training and evaluation  
+- 📱 **Mobile App**: *(Optional)* Flutter cross-platform mobile interface  
 
-API: FastAPI backend for model inference
+---
 
-Crop Yield Predictor: Custom logic for handling predictions
+## 🎥 Video Demo
 
-Mobile App: (Optional) Mobile interface for predictions
+[🔗 Demo Video Link](#) *(replace this with your actual link)*
 
-Swagger Docs: API testing and documentation UI
+Demo includes:
 
-🎥 Video Demo
-Demo covers:
+- ✅ API testing via Swagger UI  
+- 📱 Mobile app prediction  
+- 📊 Model performance comparison  
 
-Model prediction using sample input
+---
 
-Swagger UI API test walkthrough
+## 🔗 Live API Documentation
 
-Model performance overview
+- **Swagger UI**: [View Docs](https://your-api-url.com/docs) *(replace with your actual link)*  
+- **Endpoint**:  
+  `POST https://your-api-url.com/predict`
 
-🔗 Watch Demo Video
+### 📤 Example Request
 
-🔗 Live API Documentation
-Swagger UI:
-API Docs
-
-Endpoint:
-POST https://your-api-url.com/predict
-
-Example Request:
-json
-Copy
-Edit
+```json
 {
   "Rainfall_mm": 1800,
   "Temperature_Celsius": 45,
@@ -63,7 +64,7 @@ Edit
   "Weather_Condition": 2,
   "Region": 0
 }
-Example Response:
+📥 Example Response
 json
 Copy
 Edit
@@ -72,52 +73,42 @@ Edit
   "units": "tons_per_hectare"
 }
 🛠️ Installation Guide
-1. Clone the repository:
+🔃 Clone the Repository
 bash
 Copy
 Edit
 git clone https://github.com/Diana-codes/linear_regression_model.git
 cd linear_regression_model
-2. Run Jupyter Notebook (for model exploration)
+🧪 Run Jupyter Notebook
 bash
 Copy
 Edit
 cd summative/linear_regression
 jupyter notebook model.ipynb
-3. Start the API server
+🚀 Start the API
 bash
 Copy
 Edit
 cd ../API
 pip install -r requirements.txt
 uvicorn app:app --reload
-4. Run the Crop Yield Predictor (Optional)
+🌾 Run the Crop Yield Predictor
 bash
 Copy
 Edit
 cd ../crop_yield_predictor
 python predict.py
-📂 Repository Structure
+📂 Project Structure
 bash
 Copy
 Edit
 linear_regression_model/
+│
 ├── summative/
-│   ├── linear_regression/      # Jupyter notebook & dataset
-│   ├── API/                    # FastAPI implementation for the model
-│   ├── crop_yield_predictor/  # Custom prediction logic
-└── README.md
+│   ├── linear_regression/         # Jupyter notebook & dataset
+│   ├── API/                       # FastAPI implementation
+│   └── crop_yield_predictor/     # Custom prediction logic
+│
+└── README.md                      # Project documentation
 🪪 License
-This version:
-
-Uses clean, organized Markdown
-
-Includes all critical project sections
-
-Provides detailed setup instructions
-
-Links to demo and Swagger documentation
-
-Maintains readable structure
-
-MIT License © 2023 Diana Ruzindana
+MIT License © 2024 Diana Uwase
