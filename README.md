@@ -44,7 +44,7 @@ Model performance overview
 🔗 Watch Demo Video  https://youtu.be/BDshaEDKz9E
 
 🔗 Live API Documentation
-Swagger UI:
+Swagger UI:(https://linear-regression-model-80-l1dl.onrender.com/docs#/
 API Docs
 
 Endpoint:
